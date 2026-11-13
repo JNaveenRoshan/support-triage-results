@@ -3,9 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef0fb;--card:#fff;--fg:#1c1d3a;--mu:#9a9db5;--mu2:#6c7090;--line:#eceef6;--a:#5b4fe9;--o:#ff7a50;--side:#fff;--shadow:0 6px 24px rgba(40,44,90,.06)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#11131f;--card:#1a1d2e;--fg:#eceefe;--mu:#7d82a3;--mu2:#a3a8c7;--line:#262a40;--side:#161928;--shadow:none}}
-:root[data-theme="dark"]{--bg:#11131f;--card:#1a1d2e;--fg:#eceefe;--mu:#7d82a3;--mu2:#a3a8c7;--line:#262a40;--side:#161928;--shadow:none}
+:root{--bg:#f7f8fd;--card:#fff;--fg:#1c1d3a;--mu:#9a9db5;--mu2:#6c7090;--line:#f0f1f8;--a:#5b4fe9;--o:#ff7a50;--side:#fff;--shadow:0 4px 18px rgba(40,44,90,.045)}
 *{box-sizing:border-box}html,body{margin:0}body{background:var(--bg);color:var(--fg);font:14px/1.5 Poppins,system-ui,sans-serif}
 .app{display:grid;grid-template-columns:230px minmax(0,1fr);min-height:100vh}
 aside{background:var(--side);padding:26px 18px;border-right:1px solid var(--line);position:sticky;top:0;height:100vh}
@@ -14,8 +12,8 @@ aside{background:var(--side);padding:26px 18px;border-right:1px solid var(--line
 nav a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;color:var(--mu);text-decoration:none;font-weight:500;margin-bottom:4px}
 nav a svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 nav a.on{color:var(--a);background:color-mix(in srgb,var(--a) 10%,transparent)} nav a:hover{color:var(--fg)}
-.side-card{margin-top:28px;background:var(--a);color:#fff;border-radius:14px;padding:16px;font-size:12.5px}
-.side-card b{display:block;font-size:22px;line-height:1.2}
+.side-card{margin-top:28px;background:#f1effe;color:var(--mu2);border-radius:14px;padding:16px;font-size:12.5px}
+.side-card b{display:block;font-size:22px;line-height:1.2;color:var(--a)}
 main{padding:28px 30px 40px;min-width:0}
 .top{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:22px}
 .top h1{margin:0;font-size:22px} .top p{margin:2px 0 0;color:var(--mu2);font-size:13px} .top p b{color:var(--o);font-weight:600}
@@ -37,9 +35,9 @@ table{width:100%;border-collapse:collapse} td,th{padding:12px 8px;border-bottom:
 th{color:var(--mu);font-weight:500;font-size:12px} tr:last-child td{border:0} .msg{font-size:13px} .who{color:var(--mu);font-size:11.5px;margin-top:2px}
 .chip{display:inline-block;white-space:nowrap;font-size:11.5px;font-weight:500;padding:3px 10px;border-radius:99px;color:var(--c);background:color-mix(in srgb,var(--c) 14%,transparent)}
 .mono{font-family:ui-monospace,Consolas,monospace;font-size:12px;white-space:nowrap;color:var(--mu2)}
-.orange{background:var(--o);color:#fff} .orange h3{color:#fff} .orange p{color:#ffe7de;font-size:12px;margin:2px 0 12px}
+.orange{background:#fff3ed;color:var(--fg)} .orange h3{color:#e2602f} .orange p{color:#c98468;font-size:12px;margin:2px 0 12px}
 .orange ul{list-style:none;margin:0;padding:0} .orange li{display:grid;grid-template-columns:118px minmax(0,1fr) 50px;gap:10px;align-items:center;margin:11px 0;font-size:13px}
-.orange .cb{height:8px;border-radius:4px;background:rgba(255,255,255,.3)} .orange .cb i{display:block;height:100%;border-radius:4px;background:#fff} .orange li b{text-align:right;font-weight:600}
+.orange .cb{height:8px;border-radius:4px;background:#ffe0d3} .orange .cb i{display:block;height:100%;border-radius:4px;background:#ff8f6a} .orange li b{text-align:right;font-weight:600}
 .mrow{display:grid;grid-template-columns:76px minmax(0,1fr) 40px;gap:10px;align-items:center;margin:10px 0;font-size:13px} .mrow span{color:var(--mu2)}
 .mt{height:8px;border-radius:4px;background:var(--line)} .mt i{display:block;height:100%;border-radius:4px} .mrow b{text-align:right;font-weight:600}
 .check{display:flex;gap:18px;align-items:center} .ring{flex:none} .check p{margin:4px 0 0;color:var(--mu2);font-size:12.5px}
@@ -53,7 +51,7 @@ th{color:var(--mu);font-weight:500;font-size:12px} tr:last-child td{border:0} .m
  nav a span{display:none} .logo div{display:none} .check{flex-direction:column;align-items:flex-start}}
 </style></head><body><div class="app">
 <aside>
- <div class="logo"><span class="tile" style="background:var(--a);color:#fff"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4"/><path d="M4 13 6 5h12l2 8v6H4z"/></svg></span><div>Support Triage<small>LLM pipeline</small></div></div>
+ <div class="logo"><span class="tile" style="background:#ecebfd;color:var(--a)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13h4l2 3h4l2-3h4"/><path d="M4 13 6 5h12l2 8v6H4z"/></svg></span><div>Support Triage<small>LLM pipeline</small></div></div>
  <nav>
   <a class="on" href="#top"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a>
   <a href="#queue"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c1 3 5 5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z"/></svg><span>Reply first</span></a>
